@@ -69,3 +69,6 @@ if(MKL_INCLUDE_DIR)
 else()
   message("MKL include directory not found, disabling Pardiso.")
 endif()
+
+add_executable(gravomg_exe main.cpp)
+target_link_libraries(gravomg_exe PUBLIC gravomg)
